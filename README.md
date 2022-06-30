@@ -74,7 +74,11 @@ INSTALLED_APPS = [
 ...
 ]
 ```  
+product-search/products/app.py
 
+product-search/products/models.py
+
+product-search/products/documents.py
 
 
 
