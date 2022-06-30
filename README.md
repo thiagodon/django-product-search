@@ -15,7 +15,7 @@ https://hub.docker.com/_/postgres
 https://hub.docker.com/_/elasticsearch
 
 docker-compose.yml
-
+```
 version: '3.8'
 services:
   db:
@@ -40,6 +40,8 @@ services:
       xpack.monitoring.enabled: "true"
     volumes:
       - elk:/var/lib/elasticsearch/data/
+```
+
 ```  
 $ docker-compose up -d
 $ docker-compose exec postgres sh -c 'export PGPASSWORD=postgres && psql -h 127.0.0.1 -p 5432 -U postgres postgres -c "create database product-search"'
