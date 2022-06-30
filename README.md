@@ -2,20 +2,18 @@
 Api de Busca de Produtos - Django - Elasticsearch
 Instalação Poetry
 
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-
-mkdir django-product-search && cd django-product-search
-
-poetry init
-
-poetry add django
-
-poetry run django-admin startproject django-poetry-example .
+```
+$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+$ mkdir django-product-search && cd django-product-search
+$ poetry init
+$ poetry add django
+$ etry run django-admin startproject django-poetry-example .
+```
 
 https://docs.docker.com/engine/install/ubuntu/
-
 https://hub.docker.com/_/postgres
 https://hub.docker.com/_/elasticsearch
+
 docker-compose.yml
 
 version: '3.8'
@@ -42,16 +40,16 @@ services:
       xpack.monitoring.enabled: "true"
     volumes:
       - elk:/var/lib/elasticsearch/data/
-      
-docker-compose up -d
-
-docker-compose exec postgres sh -c 'export PGPASSWORD=postgres && psql -h 127.0.0.1 -p 5432 -U postgres postgres -c "create database product-search"'
-
+```  
+$ docker-compose up -d
+$ docker-compose exec postgres sh -c 'export PGPASSWORD=postgres && psql -h 127.0.0.1 -p 5432 -U postgres postgres -c "create database product-search"'
+```
 ou 
-
-docker-compose exec postgres sh -c 'export PGPASSWORD=postgres && psql -h 127.0.0.1 -U postgres -d postgres'
+```
+$ docker-compose exec postgres sh -c 'export PGPASSWORD=postgres && psql -h 127.0.0.1 -U postgres -d postgres'
 CREATE DATABASE product-search;
 exit;
+```
 
 
 
